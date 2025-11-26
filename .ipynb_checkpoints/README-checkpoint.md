@@ -1,89 +1,79 @@
-Customer Churn Analysis
 
-A Data Analytics project by Dani Reyes
+---
 
-This project analyzes customer churn using a synthetic dataset modeled after the Telco Customer Churn dataset. The goal is to understand why customers leave, calculate key business KPIs, visualize patterns, and provide actionable insights to reduce churn.
+##  Project Objectives
 
-Objective
+- Clean and preprocess the customer dataset  
+- Calculate churn-related KPIs  
+- Analyze factors that influence customer churn  
+- Create visualizations to support findings  
+- Provide business insights and strategic recommendations  
 
-Identify the key factors that drive customer churn and provide business recommendations to improve customer retention.
+---
 
-Technologies Used
+## Key Performance Indicators (KPIs)
 
-Python
+These KPIs were calculated in the Jupyter Notebook:
 
-Pandas
+- **Churn Rate** – Percentage of customers who left  
+- **Average Monthly Charges**  
+- **Average Tenure**  
+- **Churn by Contract Type**  
+- **Churn by Payment Method**  
 
-Matplotlib
+---
 
-Jupyter Notebook
+##  Technologies Used
 
-Data Cleaning
+- Python  
+- Pandas  
+- Matplotlib  
+- Jupyter Notebook  
 
-Data was cleaned using a custom function (clean_churn) that:
+---
 
-Removed unnecessary spaces
+##  Data Cleaning Steps
 
-Converted string values to numeric when needed
+Data was cleaned using the `clean_churn()` function in `src/cleaning.py`:
 
-Fixed missing values
+- Converted text columns to numeric (e.g., `TotalCharges`)  
+- Removed missing values  
+- Converted Yes/No columns into binary  
+- One-hot encoded categorical variables  
+- Standardized column names  
 
-Encoded categorical variables
+---
 
-Converted Yes/No values into 1/0
+## Visualizations
 
-Applied one-hot encoding to all remaining categoricals
+The following visualizations were created:
 
-Key Performance Indicators (KPIs)
+- Churn distribution bar plot  
+- Churn rate by contract type (stacked bar chart)  
+- Monthly charges distribution by churn  
+- Tenure distribution by churn  
 
-Churn Rate
+---
 
-Average Monthly Charges
+## Insights
 
-Average Tenure
+- Customers on **month-to-month contracts** churn at a significantly higher rate.  
+- Higher **monthly charges** are strongly associated with churn.  
+- Customers with **low tenure** are more likely to leave early.  
+- Long-term contracts (“One year” and “Two year”) show much lower churn rates.  
 
-Churn by Contract Type
+---
 
-Churn by Payment Method
+## Business Recommendations
 
-Visual Analysis
+- Encourage customers on month-to-month plans to switch to long-term contracts.  
+- Offer discounts or loyalty programs for high-charge customers at risk of churn.  
+- Improve onboarding and support for new customers with low tenure.  
+- Provide incentives for customers paying via electronic methods with high churn rate.  
 
-Churn Distribution
+---
 
-Churn Rate by Contract Type
+##  Dataset
 
-Monthly Charges vs Churn
+The dataset used is a synthetic file created to simulate real customer behavior:
 
-Tenure vs Churn
-
-Insights
-
-Customers with Month-to-Month contracts churn the most.
-
-Higher Monthly Charges correlate strongly with churn.
-
-New customers (low tenure) leave at higher rates.
-
-Senior Citizens show higher churn.
-
-Electronic Check users churn disproportionately more.
-
-Customers with more add-on services tend to stay longer.
-
-Business Recommendations
-
-Offer retention incentives for Month-to-Month customers.
-
-Reevaluate pricing or offer discounts to high-charge customers.
-
-Improve the onboarding process for new customers.
-
-Create support programs for Senior Citizens.
-
-Provide incentives to switch from Electronic Check to more stable payment methods.
-
-Promote bundles to increase customer stickiness.
-
-Conclusion
-
-This analysis provides a clear understanding of churn patterns and presents strategic recommendations that can directly help reduce customer turnover and improve business performance.
